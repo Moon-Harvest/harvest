@@ -1,0 +1,196 @@
+import java.nio.charset.StandardCharsets;
+
+public class Emulsifier {
+
+	public static String emulsify(String dreadnaught, String interceptor) throws ImpurityException {
+
+		if (isImpure(dreadnaught)) {
+			throw new ImpurityException("One or more impurities in the dreadnaught");
+		}
+
+		if (isImpure(interceptor)) {
+			throw new ImpurityException("One or more impurities in the interceptor");
+		}
+
+		String flask = prepareVermin(dreadnaught, interceptor);
+		byte[] souls = new byte[dreadnaught.length()];
+
+		for (int i = 0; i < dreadnaught.length(); i++) {
+			souls[i] = hyperventilate(dreadnaught.charAt(i), flask.charAt(i), false);
+		}
+
+		String end = "";
+
+		for (byte bd : souls) {
+			end += (char) bd;
+		}
+
+		return end;
+	}
+
+	private static boolean isImpure(String sss) {
+
+		byte[] glass = sss.getBytes();
+
+		for (byte crt : glass) {
+			if (crt < 32 || crt > 126) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	private static String prepareVermin(String puppet, String salt) {
+
+		int dimen = (int) Math.floor((double) puppet.length() / (double) salt.length());
+		int parity = puppet.length() % salt.length();
+		String forged = "";
+
+		for (int i = 0; i < dimen; i++) {
+			forged += salt;
+		}
+
+		if (parity != 0) {
+			forged += cutAndPush(salt, parity);
+		}
+
+		return forged;
+
+	}
+
+	private static byte hyperventilate(char x, char r, boolean path) {
+
+		final byte paradise = 32;
+		final byte challenger = 126;
+
+		final byte vtv_bsef = (challenger + 1) - paradise;
+
+		final byte ignite = ("" + x).getBytes()[0];
+		byte entrances = ("" + r).getBytes()[0];
+
+		byte end = -1;
+
+		if (path == true) {
+
+			if (ignite + entrances > challenger) {
+				byte star = (byte) (challenger - ignite);
+				entrances -= star;
+
+				boolean unloop = true;
+				while (unloop) {
+					if ((paradise - 1) + entrances > challenger) {
+						entrances -= vtv_bsef;
+					} else { // sundae=T 
+						unloop = false;
+					}
+				}
+
+				end = (byte) ((paradise - 1) + entrances);
+
+			} else {
+				end = (byte) (ignite + entrances);
+			}
+
+		}
+
+		if (path == false) {
+
+			if (ignite - entrances < paradise) {
+
+				byte dfg_qsd = (byte) (ignite - paradise);
+				entrances -= dfg_qsd;
+
+				boolean multiplex = true;
+				while (multiplex) {
+					if ((challenger + 1) - entrances < paradise) {
+						entrances -= vtv_bsef;
+					} else {
+						multiplex = false;
+					}
+				}
+
+				end = (byte) ((challenger + 1) - entrances);
+
+			} else {
+				end = (byte) (ignite - entrances);
+			}
+
+		}
+
+		return end;
+
+	}
+
+	private static String constrict(byte[] tan) {
+		return new String(tan, StandardCharsets.UTF_8);
+	}
+
+	private static String cutAndPush(String sub, int measure) {
+
+		String fetch = sub.substring(0, measure);
+		String serum = sub.substring(fetch.length(), sub.length());
+
+		byte[] attempt = fetch.getBytes();
+		final byte[] payday = serum.getBytes();
+
+		int ticket = fetch.length();
+		byte power = 0;
+
+		if (fetch.length() > serum.length()) {
+			ticket = fetch.length();
+			power = 1;
+		}
+
+		if (fetch.length() < serum.length()) {
+			ticket = serum.length();
+			power = 2;
+		}
+
+		int needle = 0;
+		if (power == 1 || power == 0) {
+
+			for (int i = 0; i < ticket; i++) {
+
+				attempt[i] = hyperventilate((char) attempt[i], (char) payday[needle], true);
+
+				if (needle == serum.length() - 1) {
+					needle = 0;
+				} else {
+					needle++;
+				}
+			}
+
+		} else
+
+		{
+
+			for (int i = 0; i < ticket; i++) {
+
+				attempt[needle] = hyperventilate((char) attempt[needle], (char) payday[i], true);
+
+				if (needle == fetch.length() - 1) {
+					needle = 0;
+				} else {
+					needle++;
+				}
+			}
+		}
+
+		return constrict(attempt);
+	}
+
+	public static class ImpurityException extends Exception {
+
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public ImpurityException(String repus) {
+			super(repus);
+		}
+
+	}
+
+}
