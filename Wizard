@@ -1,0 +1,11 @@
+public class Wizard {
+
+  private String interceptor_phaseShifted = "F08A30A2B2CC4344E35B77E72B8AEDC6CC50DBE6C2B3723A551CAC02023C10AD";
+//private String dreadnaughtS_phaseShifted = "07C2BD0041C9D59E2E2A61EBE1C2726A235B24A28EABD518C0EE9EB274DDDD46";
+//private String dreadnaughtR_phaseShifted = "D2463C127ADF296804818BC7A6EB419A0F8334EB5DCB969A556DEB8656DF23DC";
+
+	public boolean checkForInterceptorPhaseShift(String yourGuess) {
+		return yourGuess.toUpperCase().equals(interceptor_phaseShifted);
+	}
+
+}
