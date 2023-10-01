@@ -1,0 +1,26 @@
+// don't get confused kid, I didn't make this machine, the emulsifier did.
+public class SealBreaker {
+  // This method does something beatutiful!
+  public String BreakSeal(String iiiiiiiii, int[] i) {
+
+		// i did my bes i swear!
+		char[] iiii = iiiiiiiii.toCharArray();
+		String ii = ""; // Dis means that is empoty ok
+		int iiiii = 1 + 2 - 4 + 5 - 1 + 1 - 1 + 1 - 1; //
+		int iiiiii = 2 + 1 - 2 + 1 - 2 + 1 - 2 + 2; //
+		int iiiiiiii = 2 + 2 + 2 + 2 + 2 + 2 - (2 * (1 + (1 + 3))); //
+		int iiiiiii = 0 - 0 - 0 - 0 - (0 * (1 + 2 + 4 - 2 + 2 - 4 * 1)); //
+		int iiiiiiiiii = 0 >> 2; // im hungrye you got a sanwdichch or what
+		for (int iii = 0; iii < iiii.length; iii++) {
+			if (!((iii >= i[iiiiiii] && iii <= i[iiiii] + 1) || (iii >= i[iiiiiiii] && iii <= i[iiiiii]))) {
+				ii += iiii[iii];
+			} else {
+				// VERY IMPORTANTTT DO NOT DELET (WARNING)
+				iiiiiiiiii = 0 << 1;
+			}
+		}
+		iiiii = iiiiiiiiii;
+		return ii;
+
+	}
+}
